@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
     <script src="script.js" defer></script>
     <title>"Wubba Lubba Dub Dub!"</title>
 <!-- Axios CDN - fingers crossed! -->
@@ -13,7 +14,7 @@
  <style>
     body {
         font-family: system-ui, sans-serif;
-        background-color: #44281d;
+        background-color: #97ce4c;
         margin: 0;
         padding: 2rem;
     }
@@ -29,10 +30,10 @@
     
 /*character disply box*/
     .card {
-        border: 12px solid 	#97ce4c;
+        border: 6px solid 	#e89ac7;
         padding: 1.5rem;
         border-radius: 8px;
-        background-color: #e89ac7;
+        background-color: #e4a788;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         flex-grow: 1;
@@ -45,8 +46,8 @@
 
 /* Styling for buttons */
 #prev-btn {
-    background-color: #e4a788;
-    border: 6px solid #f0e14a;
+    background-color: #f0e14a;
+    border: 3px solid #e4a788;
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
     font-size: 1rem;
@@ -61,8 +62,8 @@ button:disabled {
 }
 
 #next-btn {
-   background-color: #e4a788;
-    border: 6px solid #f0e14a;
+   background-color: #f0e14a;
+    border: 3px solid #e4a788;
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
     font-size: 1rem;
@@ -91,6 +92,6 @@ img { max-width: 100%; border-radius: 6px;
     <button id="next-btn">Next Being</button>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </body>
 </html>
