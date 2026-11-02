@@ -2,103 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wubba Lubba Dub Dub!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
     <script src="script.js" defer></script>
-    <title>"Wubba Lubba Dub Dub!"</title>
-<!-- Axios CDN - fingers crossed! -->
- 
- 
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem;
+            background-color: #97ce4c;
+            color: #44281d;
+            font-family: "Nunito", sans-serif;
+        }
 
- 
- <style>
-    body {
-        font-family: system-ui, sans-serif;
-        background-color: #97ce4c;
-        margin: 0;
-        padding: 2rem;
-    }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    h1 {
+        h1, h2 {
+            font-family: "Bangers", cursive;
+            letter-spacing: 1px;
             text-align: center;
-            color:#44281d;  
-    }
+        }
 
-    .carousel-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        max-width: 100%;
-        margin: 2rem auto;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #44281d;
+            font-weight: 700;
+        }
+
+        a:hover {
+            background-color: #f0e14a;
+        }
+
+        .card {
+            background-color: #f0e14a;
+            border: 6px solid #44281d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            font-weight: 1000;
+            color: #44281d;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
     
-/*character disply box*/
-    .card {
-        border: 6px solid 	#e89ac7;
-        padding: 1.5rem;
-        border-radius: 8px;
-        background-color: #e4a788;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        flex-grow: 1;
-        min-height:auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        }
 
-/* Styling for buttons */
-#prev-btn {
-    background-color: #f0e14a;
-    border: 3px solid #e4a788;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #44281d;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-button:disabled {
-    opacity: 0;
-    cursor: not-allowed;
-}
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-#next-btn {
-   background-color: #f0e14a;
-    border: 3px solid #e4a788;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #44281d;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-button:disabled {
-    opacity: 0;
-    cursor: not-allowed;
-}
-img { max-width: 100%; border-radius: 6px; 
-}
-
+        button {
+            background-color: #44281d;
+            color: #f0e14a;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem;
+            font-family: "Nunito", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
     </style>
-</head>    
-
+</head>
 <body>
-
-<h1>Rick and Morty are weird. So are their cast mates.</h1>
-
-<div class="carousel-wrapper">
-    <button id="prev-btn">Previous Being</button>
-    <div id="card-container">
-        Loading characters
-    </div>
-    <button id="next-btn">Next Being</button>
-</div>
-
-
+    <main>
+        <h1>Rick and Morty are weird 
+            (so are their cast mates).</h1>
+        <div id="app">Loading...</div>
+    </main>
 </body>
 </html>
