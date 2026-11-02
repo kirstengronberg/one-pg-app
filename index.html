@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="script.js" defer></script>
+    <title>"Wubba Lubba Dub Dub!"</title>
+<style>
+
+     body { font-family: system-ui, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; color: #97ce4c; background-color: #44281d}
+     .card {border: 1px solid #e89ac7; border-radius: 6px; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;}
+     .error {color: #d9534f}
+</style>   
+
+
+<!-- Axios CDN - fingers crossed! -->
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+</head>    
+
+<body>
+    <h1>Rick and Morty API</h1>
+    <button onclick="showRandomCharacter()">next being</button>
+    <button id="back-btn">previous being</button>
+
+<p id="fact">Loading...</p>
+
+<img id="pic" alt="">
+
+
+
+</body>
+</html>
