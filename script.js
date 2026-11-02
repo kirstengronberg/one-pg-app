@@ -18,19 +18,21 @@ function render() {
     nextBtn.disabled = index === characters.length - 1;
 }
 
-async function loadCharacters() {
-    try {
-        const requests = [];
-        for (let page = 1; page <= 5; page++) {
-            requests.push(axios.get(`https://rickandmortyapi.com/api/character?page=${page}`));
-        }
-        const responses = await Promise.all(requests);
-        characters = responses.flatMap(response => response.data.results);
-        render();
-    } catch (error) {
-        console.error("Failure:", error);
-        card.textContent = "Failure";
+function loadCharacters() {
+    const requests = [];
+    for (let page = 1; page <= 5; page++) {
+        requests.push(axios.get(`https://rickandmortyapi.com/api/character?page=${page}`));
     }
+
+    Promise.all(requests)
+        .then(responses => {
+            characters = responses.flatMap(response => response.data.results);
+            render();
+        })
+        .catch(error => {
+            console.error("Failure:", error);
+            card.textContent = "Failure";
+        });
 }
 
 nextBtn.addEventListener("click", () => {
