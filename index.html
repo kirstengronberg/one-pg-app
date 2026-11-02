@@ -5,28 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="script.js" defer></script>
     <title>"Wubba Lubba Dub Dub!"</title>
-<style>
-
-     body { font-family: system-ui, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; color: #97ce4c; background-color: #44281d}
-     .card {border: 1px solid #e89ac7; border-radius: 6px; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;}
-     .error {color: #d9534f}
-</style>   
-
-
 <!-- Axios CDN - fingers crossed! -->
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+ 
+ 
+
+ 
+ <style>
+    body {
+        font-family: system-ui, sans-serif;
+        background-color: #44281d;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+    
+/*character disply box*/
+    .card {
+        border: 12px solid 	#97ce4c;
+        padding: 1.5rem;
+        border-radius: 8px;
+        background-color: #e89ac7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex-grow: 1;
+        min-height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* Styling for buttons */
+#prev-btn {
+    background-color: #e4a788;
+    border: 6px solid #f0e14a;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #44281d;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+}
+
+#next-btn {
+   background-color: #e4a788;
+    border: 6px solid #f0e14a;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #44281d;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+}
+img { max-width: 100%; border-radius: 6px; 
+}
+
+    </style>
 </head>    
 
 <body>
-    <h1>Rick and Morty API</h1>
-    <button onclick="showRandomCharacter()">next being</button>
-    <button id="back-btn">previous being</button>
 
-<p id="fact">Loading...</p>
+<div class="carousel-wrapper">
+    <button id="prev-btn">Previous Being</button>
+    <div id="card-container">
+        Loading characters
+    </div>
+    <button id="next-btn">Next Being</button>
+</div>
 
-<img id="pic" alt="">
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
